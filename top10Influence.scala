@@ -2,8 +2,8 @@ import org.apache.spark.graphx.GraphLoader
 import org.apache.spark.graphx._
 import org.apache.spark.sql.functions._
 
-val retweetGraph = GraphLoader.edgeListFile(sc, "retweet_network.edgelist")
-val mentionGraph = GraphLoader.edgeListFile(sc, "mention_network.edgelist")
+val retweetGraph = GraphLoader.edgeListFile(sc, "../data/graphx/higgs-retweet_network.edgelist")
+val mentionGraph = GraphLoader.edgeListFile(sc, "../data/graphx/higgs-mention_network.edgelist")
 
 // Combine the retweet and mention graphs by merging their vertices and edges
 val combinedGraph = Graph(

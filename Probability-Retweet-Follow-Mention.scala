@@ -3,9 +3,9 @@ import org.apache.spark.graphx._
 import org.apache.spark.sql.functions._
 
 
-val retweetGraph = GraphLoader.edgeListFile(sc, "retweet_network.edgelist")
-val mentionGraph = GraphLoader.edgeListFile(sc, "mention_network.edgelist")
-val socialGraph = GraphLoader.edgeListFile(sc, "social_network.edgelist")
+val retweetGraph = GraphLoader.edgeListFile(sc, "../data/graphx/higgs-retweet_network.edgelist")
+val mentionGraph = GraphLoader.edgeListFile(sc, "../data/graphx/higgs-mention_network.edgelist")
+val socialGraph = GraphLoader.edgeListFile(sc, "../data/graphx/higgs-social_network.edgelist")
 
 // Count the number of edges in the "follows" graph
 val totalFollowsEdges = socialGraph.edges.count()
